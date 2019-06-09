@@ -45,7 +45,7 @@
         <script>
         var txt = // anti crawler bot index
             String.fromCharCode(43,52,52,40,48,41) +
-            String.fromCharCode.apply(null,[7,7,6,7,5,9,6,0,6,4].map(x=>x+48)) +
+            String.fromCharCode.apply(null,[7,7,6,7,5,9,6,0,6,4].map(function (x) { return x+48; })) +
             ' / admin' + String.fromCharCode(64) + 'peertopeer.ltd';
         var canvas = document.getElementById('info').getContext('2d');
         canvas.font = 'large monospace';
