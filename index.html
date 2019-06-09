@@ -3,6 +3,7 @@
     <head>
         <title>Peer to Peer Ltd</title>
         <meta charset="UTF-8">
+        <meta name="description" content="Peer to Peer Ltd - Decentralized Web Solutions">
         <style>
         html, body, div { height: 100%; }
         body { margin: 0; }
@@ -26,9 +27,29 @@
             0%   { filter: grayscale(0%); }
             100% { filter: grayscale(100%); }
         }
+        span {
+            position: fixed;
+            width: 100%;
+            bottom: 4px;
+            text-align: center;
+            color: white;
+            font-family: monospace;
+            font-size: x-large;
+        }
         </style>
     </head>
     <body>
         <div></div>
+        <span>Peer to Peer Ltd - Decentralized Web Solutions<br><canvas id="info" width="350" height="30"></canvas></span>
+        <script>
+        var txt = // anti crawler bot index
+            String.fromCharCode(43,52,52,40,48,41) +
+            String.fromCharCode.apply(null,[7,7,6,7,5,9,6,0,6,4].map(x=>x+48)) +
+            ' / admin' + String.fromCharCode(64) + 'peertopeer.ltd';
+        var canvas = document.getElementById('info').getContext('2d');
+        canvas.font = 'large monospace';
+        canvas.fillStyle = '#FFF';
+        canvas.fillText(txt, 0, 20);
+        </script>
     </body>
 </html>
